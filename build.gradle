@@ -1,5 +1,28 @@
-buildscript {
-    repositories { google() ; mavenCentral() }
-    dependencies { classpath 'com.android.tools.build:gradle:8.1.0' ; classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10" }
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
-allprojects { repositories { google() ; mavenCentral() } }
+
+android {
+    namespace 'com.ybridge.node'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.ybridge.node"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+}
