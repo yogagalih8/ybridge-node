@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.microsoft.com/apk/res/manifest">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ybridge.node">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <application android:label="Ybridge Node" android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".MainActivity" android:exported="true">
+
+    <application
+        android:label="Ybridge Node"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
